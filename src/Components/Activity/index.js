@@ -682,8 +682,13 @@ export const Activity = ({ activity }) => {
   ]
 
   return (
-    <div className='grid grid-flow-col auto-cols-max'>
-      {fakeActivity.map((week) => (<ActivityWeek weekData={week} />))}
+    <div className='grid grid-flow-col auto-cols-max mt-4'>
+      <div className='flex-1'>
+        <p className='mt-4 mr-1 text-xs'>Mon</p>
+        <p className='mt-4 mr-1 text-xs'>Wed</p>
+        <p className='mt-4 mr-1 text-xs'>Fri</p>
+      </div>
+      {fakeActivity.map((week, index) => (<ActivityWeek key={week.week} weekData={week} prevWeek={fakeActivity[index - 1]?.week} />))}
     </div>
   )
 }

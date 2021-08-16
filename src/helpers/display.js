@@ -1,11 +1,10 @@
 export const getActivitySquareStyle = (commitCount) => {
-  console.log('commitCount', commitCount)
   switch (commitCount) {
     case 0:
-      return ({ color: 'bg-gray-600', opacity: 'opacity-40' })
+      return ({ color: 'bg-gray-600', opacity: 'opacity-20' })
     case 1:
     case 2:
-      return ({ color: 'bg-green-300', opacity: 'opacity-30' })
+      return ({ color: 'bg-green-300', opacity: 'opacity-40' })
     case 3:
       return ({ color: 'bg-green-300', opacity: 'opacity-70' })
     case 4:
@@ -16,8 +15,8 @@ export const getActivitySquareStyle = (commitCount) => {
       return ({ color: 'bg-green-500', opacity: 'opacity-90' })
     case 8:
     case 9:
-      return ({ color: 'bg-green-700', opacity: 'opacity-70' })
+      return ({ color: 'bg-green-700', opacity: 'opacity-80' })
     default:
-      return ({ color: 'bg-green-700', opacity: 'opacity-100' })
+      return ({ color: 'bg-green-800', opacity: 'opacity-90' })
   }
 }
