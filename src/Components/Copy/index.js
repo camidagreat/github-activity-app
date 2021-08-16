@@ -10,7 +10,7 @@ export const Copy = ({ fetchActivity }) => {
 
   return (
     <div className='pb-5'>
-      <p className='font-serif'>Enter the handle of a github user to display their activity.</p>
+      <p className='font-serif'>Enter the URL for any github repo to display its activity.</p>
       <input
         type="text"
         className="form-input px-2 py-2 rounded"

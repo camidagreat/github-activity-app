@@ -5,8 +5,9 @@ import { fetchGithubActivity } from '../../services/github'
 
 export const Body = () => {
   const [activity, setActivity] = useState([])
-  const fetchActivity = (githubHandle) => {
-    console.log(fetchGithubActivity(githubHandle))
+  const fetchActivity = async (githubHandle) => {
+    const activity = await fetchGithubActivity(githubHandle)
+    setActivity(activity || [])
   }
   return (
     <div className='my-6'>
