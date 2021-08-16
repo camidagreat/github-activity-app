@@ -9,9 +9,11 @@ export const Body = () => {
     console.log(fetchGithubActivity(githubHandle))
   }
   return (
-    <div className='flex-1 my-6'>
-      <Copy fetchActivity={fetchActivity} />
-      <Activity activity={activity} />
+    <div className='my-6'>
+      <div className='px-6 flex-1'>
+        <Copy fetchActivity={fetchActivity} />
+        <Activity activity={activity} />
+      </div>
     </div>
   )
 }

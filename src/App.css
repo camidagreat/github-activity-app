@@ -1,3 +1,14 @@
 .App {
-  text-align: center;
+  padding: 30px;
+  position: relative
+}
+
+.tooltip{
+  visibility: hidden;
+  position: absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  visibility: visible;
+  z-index: 100;
 }
